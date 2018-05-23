@@ -1,0 +1,131 @@
+/* ------------------------------------- 
+	Font face
+ ------------------------------------- */
+@import "fonts"
+
+
+/* ------------------------------------- 
+	Libs import
+ ------------------------------------- */
+@import "libs"
+
+
+@import "vars"
+
+
+/* ------------------------------------- 
+	Reset styles
+ ------------------------------------- */
+@import "reset"
+
+
+/* ------------------------------------- 
+	Common styles
+ ------------------------------------- */
+*
+	-webkit-box-sizing: border-box
+	-moz-box-sizing: border-box
+	box-sizing: border-box
+	&:before, &:after
+		-webkit-box-sizing: border-box
+		-moz-box-sizing: border-box
+		box-sizing: border-box
+
+*::-webkit-input-placeholder
+	color: $black-color
+	opacity: 1
+
+*:-moz-placeholder
+	color: $black-color
+	opacity: 1
+
+*::-moz-placeholder
+	color: $black-color
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: $black-color
+	opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: $black-color
+body input:required:valid,
+body textarea:required:valid
+	color: $black-color
+
+
+body
+	max-width: 2560px
+	min-width: 320px
+	margin: 0 auto
+	position: relative
+	font: 16px/1.4 $text-font
+	overflow-x: hidden
+
+.container-in
+	max-width: 1269px
+	margin: 0 auto
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+
+.nowrap
+	white-space: nowrap
+
+.text-center
+	text-align: center
+
+::selection
+	background-color: $accent-color
+	color: $white-color
+
+
+/* ------------------------------------- 
+	Titles and text
+ ------------------------------------- */
+.title
+	font-family: $title-font
+.page-title
+	font-size: 4.5rem
+	color: $white-color
+.section
+	&-title
+		font-size: 3.625rem
+		&--white
+			color: $white-color
+		&--black
+			color: $black-color
+
+	&-text
+		font-family: $text-font
+		color: $black-color
+
+
+
+/* ------------------------------------- 
+	intro
+ ------------------------------------- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ------------------------------------- 
+
+	Media styles
+
+ ------------------------------------- */
+@import "media"
