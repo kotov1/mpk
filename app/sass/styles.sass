@@ -33,18 +33,26 @@
 
 *::-webkit-input-placeholder
 	color: $black-color
+	font-size: 20px
+	font-family: $text-font
 	opacity: 1
 
 *:-moz-placeholder
 	color: $black-color
+	font-size: 20px
+	font-family: $text-font
 	opacity: 1
 
 *::-moz-placeholder
 	color: $black-color
+	font-size: 20px
+	font-family: $text-font
 	opacity: 1
 
 *:-ms-input-placeholder
 	color: $black-color
+	font-size: 20px
+	font-family: $text-font
 	opacity: 1
 
 body input:focus:required:invalid,
@@ -63,6 +71,11 @@ body
 	font: 16px/1.4 $text-font
 	overflow-x: hidden
 
+ul, ol
+	margin: 0
+	padding-left: 0
+	list-style: none
+	
 .container-in
 	max-width: 1269px
 	margin: 0 auto
@@ -82,6 +95,12 @@ body
 	background-color: $accent-color
 	color: $white-color
 
+.pb-30
+	padding-bottom: 30px
+.pl-100
+	padding-left: 100px
+.pr-100
+	padding-right: 100px
 
 /* ------------------------------------- 
 	Titles and text
@@ -90,9 +109,12 @@ body
 	font-family: $title-font
 .page-title
 	font-size: 4.5rem
+	line-height: 0.9
 	color: $white-color
+	margin-bottom: .3em
 .section
 	&-title
+		margin-top: 0
 		font-size: 3.625rem
 		&--white
 			color: $white-color
@@ -108,24 +130,281 @@ body
 /* ------------------------------------- 
 	intro
  ------------------------------------- */
+.intro
+	min-height: 100vh
+	position: relative
+	overflow: hidden
+	background-color: $black-color
+	z-index: 1
+	&__video-bg
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		z-index: -1
+
+.logo
+	max-width: 127px
+	margin: 0 auto
+	&__svg
+		display: block
+		width: 100%
+
+
+/* ------------------------------------- 
+	header
+ ------------------------------------- */
+
+/* ----- navigation ----- */
+.nav
+	padding-left: 40px
+	&__list
+		width: 100%
+		display: flex
+		justify-content: space-between
+	&__link
+		display: block
+		font: 12px $title-font
+		color: $white-color
+		text-transform: uppercase
+		text-decoration: none
+		transition: color .3s ease
+		&:hover
+			color: $accent-color
+			text-decoration: none
+			transition: color .3s ease
+
+/* ----- phone-number ----- */
+.phone-number
+	a
+		color: $white-color
+		text-decoration: none
+		font: 18px $title-font
+		transition: color .3s ease
+		&:hover
+			color: $accent-color
+			transition: color .3s ease
+
+/* ----- header__interactivity ----- */
+.header
+	padding-right: 15px
+	&__interactivity
+		display: flex
+		justify-content: space-around
+		padding-right: 15px
+	&__btn
+		display: inline-block
+		width: 23px
+		height: 23px
+		background: none
+		border: none
+		outline: none
+		background-repeat: no-repeat
+		background-position: 50% 50%
+		transition: transform .2s
+		&-pers
+			background-image: url('../img/icons/pers.svg')
+		&-search
+			background-image: url('../img/icons/search.svg')
+		&-cart
+			background-image: url('../img/icons/cart.svg')
+		&-wrap
+			display: inline-block
+			position: relative
+			width: 23px
+			height: 23px
+			
+		&:hover
+			cursor: pointer
+			transform: scale(1.1)
+			transition: transform .2s
+		&:active
+			transform: scale(1.05) translate(1px, 1px)
+
+.items-quantity
+	position: absolute
+	top: -8px
+	right: -15px
+	display: inline-block
+	width: 17px
+	height: 17px
+	background-color: $accent-color
+	font: 9px/17px "Arvo-Regular", sans-serif	
+	text-align: center
+	color: $white-color
+	border-radius: 50%
+
+
+/* ------------------------------------- 
+	intro__heading
+ ------------------------------------- */
+.intro
+	&__heading
+		padding: 127px 0 0 85px
+	&__sub-heading
+		margin: 0 0 .8em 0
+		color: $accent-color
+		font-size: 2.5rem
+	&__text
+		font: 1.125rem $text-font
+		color: $white-color
+	&__about
+		padding-left: 210px
+		color: $accent-color
+		font: 1.5rem $title-font
+		position: relative
+		margin-top: 1.7em
+		&::before
+			content: ''
+			display: block
+			width: 179px
+			height: 2px
+			position: absolute
+			left: 0
+			top: calc(50% + 1px)
+			background: $accent-color
+			z-index: 0
+	&__offer
+		font: 1.875rem/1 $title-font
+		color: $white-color
+		border: .4em solid $accent-color
+		max-width: 12.9em
+		padding: 1.5em
+
+	&__scroll-down
+		width: 17px
+		height: 25px
+		margin: 19px auto 0
+		background: url('../img/icons/scroll.svg') no-repeat 50% 50%
+		position: relative
+		&:hover
+			cursor: pointer
+			transform: scale(1.1)
+			transition: transform .2s
+		&:active
+			transform: scale(1.05) translate(1px, 1px)
+			
+
+/* ------------------------------------- 
+	price
+ ------------------------------------- */
+.price
+	min-height: 500px
+	height: 1px
+	position: relative
+
+	/* ----- title ----- */
+	&__title
+		width: 100%
+		height: 100%
+		.container
+			height: 100%
+			position: relative
+		.section-title
+			display: inline-block
+			position: absolute
+			top: 100%
+			left: 0
+			transform: rotate(-90deg)
+			transform-origin: 0 0
+			z-index: 1
+			cursor: vertical-text
+
+	/* ----- search ----- */
+	&__search
+		position: absolute
+		width: 100%
+		top: 0
+		padding: 200px 0 50px
+		background-color: #f6f6f6
+	&__search-check-box
+		display: flex
+		align-items: center
+		text-align: center
+		justify-content: center
+	&__search-check
+		width: 51px
+		height: 23px
+		margin: 0 20px
+		position: relative
+		display: inline-block
+		input
+			opacity: 0
+		label
+			position: absolute
+			background-color: $accent-color
+			box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.12)
+			width: 100%
+			height: 100%
+			top: 0
+			left: 0
+			border-radius: 3.125rem
+			transition: background-color .2s ease-in-out
+			&:after
+				content: ""
+				display: block
+				width: 15px
+				height: 15px
+				border-radius: 50%
+				cursor: pointer
+				position: absolute
+				top: 50%
+				transform: translateY(-49%)
+				z-index: 1
+				left: 10%
+				background-color: $white-color
+				transition: left .2s ease-in-out
+		input[type=checkbox]:checked ~ label
+			&:after
+				left: 61%
+	&__search-type
+		color: $black-color
+		transition: color .3s
+		&--active
+			color: rgba($black-color, .5)
+			transition: color .3s
+
+	/* ----- search form ----- */
+	&__search-form
+		max-width: 670px
+		margin: 30px auto 0
+		label
+			display: block
+			position: relative
+	&__search-item
+		display: block
+		width: 100%
+		padding: 25px 20px 15px 20px
+		border: none
+		border: 1px solid rgba($black-color, .3)
+		border-left-color: rgba($black-color, .1)
+		border-right-color: rgba($black-color, .1)
+		border-bottom-color: transparent
+		border-radius: 5px
+		font: 20px $text-font
+		&:focus
+			outline: none
+			box-shadow: 0 -1px 4px -1px rgba($black-color, .3)
+
+
+.field-hint
+	font: 13px $text-font
+	color: rgba($black-color, .5)
+	position: absolute
+	top: 8px
+	left: 21px
 
 
 
 
 
-
-
-
-
-
-
-
+	&__list
+		background-color: #fff
 
 
 
 /* ------------------------------------- 
-
 	Media styles
-
  ------------------------------------- */
 @import "media"

@@ -1,7 +1,121 @@
 @import "vars"
 
+@media only screen and (max-width : 1400px)
+	.pl-100, .pr-100
+		padding-left: 0
+		padding-right: 0
 
 @media only screen and (max-width : 1199px)
+	.pb-30
+		padding-bottom: 0
+
+	.header
+		position: fixed
+		width: calc(100% - 30px)
+		left: 50%
+		transform: translateX(-50%)
+		top: 0
+		z-index: 10
+
+	/* ----- navigation ----- */
+	.nav
+		transition: all .25s
+		position: absolute
+		top: 33px
+		left: 25px
+		height: 36px
+		width: 36px
+		z-index: 100
+		cursor: pointer
+
+		&__list
+			flex-direction: column
+			transition: all 0s
+			position: fixed
+			right: -9000px
+
+		&__toggle
+			transition: all .25s
+			content: ""
+			height: 2px
+			width: 30px
+			border-radius: 15px
+			background-color: $accent-color
+			position: fixed
+			top: 50px
+			left: 15px
+			z-index: 10
+			&::before, &::after  
+				transition: all .25s
+				content: ""
+				position: absolute
+				left: 0
+				height: 2px
+				width: 30px
+				border-radius: 15px
+				background-color: $accent-color
+			&::before
+				top: -8px
+			&::after 
+				top: 8px
+				width: 20px
+	
+	.nav-expanded 
+		transition: all .25s
+		text-align: center
+		line-height: 2em
+		height: 100vh
+		width: 50vw
+		padding: 0
+		border-radius: 0px
+		position: fixed
+		left: -15px!important
+		top: 0!important
+		background-color: rgba($black-color, .9)
+		overflow-y: auto
+		overflow-x: hidden
+		.nav__list
+			position: relative
+			right: 0
+			padding-top: 100px
+			text-align: center
+			transition: all .1s
+			z-index: 2
+			
+		.nav__link
+			display: block
+			padding: 1.5rem 0
+			font-size: 1em
+			text-decoration: none
+			color: $white-color
+			transition: all .15s
+			&:hover 
+				background-color: rgba(0,0,0,.1)
+				text-decoration: none
+				transition: all .15s
+	
+		.nav__toggle
+			background-color: transparent
+			transition: all .25s
+			&:before 
+				transition: all .25s
+				top: 0
+				transform: rotate(45deg)
+			&:after
+				width: 30px
+				transition: all .25s
+				top: -0px
+				transform: rotate(-45deg)
+
+	/* ------------------------------------- 
+		intro
+	 ------------------------------------- */
+	.logo
+		max-width: 90px
+		margin-left: 55px
+
+	.intro__heading
+		padding: 150px 0 0 0
 
 	/**/
 
@@ -9,16 +123,86 @@
 
 @media only screen and (max-width : 991px)
 
+	.intro
+		&__heading
+			padding: 125px 0 0 0
+		&__offer
+			margin-top: 2em
+		&__scroll-down
+			margin-top: 50px
+
 	/**/
 
 
 
 @media only screen and (max-width : 767px)
 
+	.nav-expanded
+		width: 100vw
+	.nav
+		top: 24px
+	.nav__toggle
+		top: 40px
+
+	.logo
+		max-width: 70px
+
+	.header__contacts
+		display: none
+		text-align: right
+		
+
+	.ui-selectmenu-button.ui-button
+		padding: 0 5px
+	.ui-selectmenu-menu
+		background: rgba(#000,.8)
+		padding: 0 5px
+
+	.phone-number
+		padding-right: 15px
+		a
+			font-size: 14px
+
+	.header__interactivity
+		padding-right: 0
+
+
+	.page-title
+		font-size: 3.125rem
+	.intro__sub-heading
+		font-size: 1.75rem
+	.intro__offer
+		font-size: 1.5rem
+		
+
 	/**/
 
 
 @media only screen and (max-width : 575px)
+	.nav
+		top: 33px
+	.nav__toggle
+		top: 50px
+	.header
+		padding: 10px 15px 10px 0
+
+	.header__contacts
+		text-align: center
+		position: relative
+		bottom: -10px
+	.phone-number
+		a
+			font-size: 12px
+
+
+	.page-title
+		font-size: 30px
+	.intro__sub-heading
+		font-size: 24px
+	.intro__about
+		font-size: 20px
+	.intro__offer
+		font-size: 20px
 
 	/**/
 

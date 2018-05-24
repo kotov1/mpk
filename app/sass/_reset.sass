@@ -1,3 +1,88 @@
+/* ----- bootstrap conainer ----- */
 @media (min-width: 1200px)
 	.container 
 		max-width: 1474px
+
+/* ----- jquery ui theme ----- */
+.ui-selectmenu-button.ui-button
+	max-width: 160px
+	width: auto
+	padding: 0
+	color: $white-color
+	border: none
+	background: transparent
+	font: 12px $title-font
+	text-transform: uppercase
+	overflow-x: hidden
+	transition: color .3s ease
+	&:active
+		color: $accent-color
+		transition: color .3s ease
+	&:focus
+		outline: none
+
+.ui-selectmenu-menu
+	width: auto
+	height: 300px
+	
+	.ui-menu
+		margin-top: 5px
+		min-width: auto !important
+		font: 12px $title-font
+		text-transform: uppercase
+
+.ui-widget-content
+	border: none
+	background: transparent
+	color: $white-color
+	.ui-state-active
+		border: none
+		background: transparent
+		color: $white-color
+
+.ui-widget.ui-widget-content
+	border: none
+
+.ui-menu
+	.ui-menu-item-wrapper
+		padding: 5px 10px 5px 0
+		white-space: nowrap
+		transition: color .3s ease
+		&:active
+			color: $accent-color
+			transition: color .3s ease
+	.ui-state-active
+		margin: 0 0 0 -1px
+		transition: margin .15s
+
+.ui-button .ui-icon
+	background: none
+	width: 7px
+	height: 7px
+	margin-top: 2px
+	border-bottom: 2px solid $white-color
+	border-right: 2px solid $white-color
+	transform: rotate(45deg)
+	transition: transform .2s
+.ui-selectmenu-button-open
+	.ui-icon
+		margin-top: 5px
+		transform: rotate(225deg)
+		transition: transform .2s
+
+
+/* ----- custom-scroll ----- */
+.ui-selectmenu-menu.custom-scroll_container
+	position: absolute
+	.custom-scroll_inner
+		overflow-x: hidden
+		
+	.custom-scroll_bar-y
+		background-color: $accent-color
+		width: 3px
+		opacity: .8
+	.custom-scroll_bar-x
+		width: 0 !important
+		background-color: $accent-color
+		height: 3px
+		opacity: .8

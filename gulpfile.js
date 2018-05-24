@@ -25,7 +25,7 @@ var gulp           = require('gulp'),
 
 gulp.task('js', function() {
 	return gulp.src([
-		// 'app/libs/jquery/dist/jquery.min.js',
+		'app/libs/custom-scroll-master/source/jquery.custom-scroll.js',
 		'app/js/common.js'
 		])
 	.pipe(concat('scripts.js'))
