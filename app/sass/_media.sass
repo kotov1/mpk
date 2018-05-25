@@ -1,21 +1,56 @@
 @import "vars"
 
+@media only screen and (min-width : 1920px)
+	
+	.services
+		background-size: 50% auto
+
+	/**/
+
+@media only screen and (max-width : 1550px)
+
+	.intro__video-bg
+		width: auto
+		height: 100%
+
+	/**/
+
+
 @media only screen and (max-width : 1400px)
+
+	/* ------------------------------------- 
+		Common styles
+ 	------------------------------------- */
 	.pl-100, .pr-100
 		padding-left: 0
 		padding-right: 0
 
+	/**/
+
+
+
+
 @media only screen and (max-width : 1199px)
+
+	/* ------------------------------------- 
+		Common styles
+ 	------------------------------------- */
 	.pb-30
 		padding-bottom: 0
 
+
+	/* ------------------------------------- 
+		header
+	 ------------------------------------- */
 	.header
 		position: fixed
-		width: calc(100% - 30px)
+		width: 100%
 		left: 50%
 		transform: translateX(-50%)
 		top: 0
 		z-index: 10
+		&.background
+			background-color: rgba($black-color, .9)
 
 	/* ----- navigation ----- */
 	.nav
@@ -107,15 +142,76 @@
 				top: -0px
 				transform: rotate(-45deg)
 
+
 	/* ------------------------------------- 
 		intro
 	 ------------------------------------- */
 	.logo
 		max-width: 90px
-		margin-left: 55px
+		&--header
+			margin-left: 55px
 
 	.intro__heading
 		padding: 150px 0 0 0
+
+
+
+
+	/* ------------------------------------- 
+		services
+	 ------------------------------------- */
+	.services
+		z-index: 1
+		background-size: cover
+		&::before
+			content: ''
+			display: block
+			width: 100%
+			height: 100%
+			position: absolute
+			left: 0
+			top: 0
+			background: rgba(#000, .8)
+			z-index: -1
+ 	.services__content
+ 		width: 85%
+	.services__list
+		padding-left: 0
+	.services__item
+		color: $white-color
+
+
+
+	/* ------------------------------------- 
+		logos
+	 ------------------------------------- */
+	.logos
+	 	padding: 50px 0
+	.logos__block
+		justify-content: center
+	.logos__img
+		margin: 10px 30px
+
+
+
+	/* ------------------------------------- 
+		info
+	 ------------------------------------- */
+	.info
+		padding: 50px 0
+	.info__form-block
+		margin-top: 50px
+
+
+
+
+	/* ------------------------------------- 
+		footer
+	 ------------------------------------- */
+	.designer
+		text-align: center
+		
+
 
 	/**/
 
@@ -123,6 +219,9 @@
 
 @media only screen and (max-width : 991px)
 
+	/* ------------------------------------- 
+		intro
+	 ------------------------------------- */
 	.intro
 		&__heading
 			padding: 125px 0 0 0
@@ -131,32 +230,88 @@
 		&__scroll-down
 			margin-top: 50px
 
+
+	/* ------------------------------------- 
+		price
+	 ------------------------------------- */
+	.price__search-form, .price__result-inner
+		padding-left: 100px
+	.price__result-item
+		text-align: center
+		padding-left: 1px
+	.price__result-btn
+			margin: 30px auto 0
+
+	.price__result-files::before
+		left: 24px
+	.price__result-files-drop
+		width: 66%
+		margin-left: 15%
+	.price__result-files-fake
+		width: 33%
+		margin-left: 7%
+
+
+
+	/* ------------------------------------- 
+		footer
+	 ------------------------------------- */
+	.footer
+		text-align: center
+		padding: 50px 0
+	.logo--footer, .copy, .footer__contacts
+		margin-bottom: 15px
+
+
+
 	/**/
 
 
 
 @media only screen and (max-width : 767px)
 
-	.nav-expanded
-		width: 100vw
-	.nav
-		top: 24px
-	.nav__toggle
-		top: 40px
+	/* ------------------------------------- 
+		Common styles
+ 	------------------------------------- */
+	*::-webkit-input-placeholder
+		font-size: 17px
 
-	.logo
-		max-width: 70px
+	*:-moz-placeholder
+		font-size: 17px
 
+	*::-moz-placeholder
+		font-size: 17px
+
+	*:-ms-input-placeholder
+		font-size: 17px
+
+	.sm-hide
+		display: none
+
+	/* ------------------------------------- 
+		Titles and text
+	 ------------------------------------- */
+	.section-title
+		font-size: 36px
+		margin-bottom: 0
+
+	/* ------------------------------------- 
+		header
+	 ------------------------------------- */
 	.header__contacts
 		display: none
 		text-align: right
-		
-
-	.ui-selectmenu-button.ui-button
+	
+	/* ----- custom select ----- */
+	.ui-menu .ui-menu-item-wrapper
+		padding-top: 7px
+		padding-bottom: 7px
+	#ui-id-1-menu
 		padding: 0 5px
-	.ui-selectmenu-menu
 		background: rgba(#000,.8)
-		padding: 0 5px
+	.custom-scroll_inner
+		padding: 0 !important
+
 
 	.phone-number
 		padding-right: 15px
@@ -166,43 +321,167 @@
 	.header__interactivity
 		padding-right: 0
 
+	/* ----- navigation ----- */
+	.nav-expanded
+		width: 100vw
+	.nav
+		top: 24px
+	.nav__toggle
+		top: 40px
 
+
+	/* ------------------------------------- 
+		intro
+	 ------------------------------------- */
+	.logo
+		max-width: 70px
+
+		
+	/* ----- intro__heading ----- */
 	.page-title
 		font-size: 3.125rem
 	.intro__sub-heading
 		font-size: 1.75rem
 	.intro__offer
-		font-size: 1.5rem
+		font-size: 20px
+
+
+	/* ------------------------------------- 
+		price
+	 ------------------------------------- */
+	.price__search
+		padding-top: 75px
+	.price__search-form, .price__result-inner
+		padding-left: 50px
+
+	.price__search-check-box
+		flex-direction: column
+	.price__search-check
+		margin: 20px 0
+		transform: rotate(90deg)
+
+	.price__search-item, .price .price__search-form .ui-selectmenu-button
+		font-size: 18px
+		padding: 25px 15px 5px 15px
+	.field-hint
+		left: 16px
+	.price__search-form label.search-icon::before
+		right: 15px
+
+	.price .price__search-form .ui-selectmenu-button
+		margin-top: 15px
+	.price__result-item
+		font-size: 18px
 		
+	.price__result-item-code, .price__result-item-size
+		margin-left: 0
+	.price__result-value
+		margin-top: 15px
+	.price__result-btn
+		margin-top: 15px
+		padding-top: 20px
+		padding-bottom: 20px
+
+	.price__result-files
+		flex-direction: column
+		padding-top: 75px
+		&::before
+			top: 15px
+			left: 50%
+			transform: translateX(-50%)
+	.price__result-files-title
+		margin-bottom: 0
+	.price__result-files-drop, .price__result-files-fake
+		width: 100%
+		margin-left: 0
+	.price__result-files-fake
+		margin-top: 10px
+
+
+	/* ------------------------------------- 
+		services
+	 ------------------------------------- */
+	.services
+		min-height: auto
+		height: auto
+		padding: 50px 0
+		animation: bgMove 60s infinite
+
+	.services__item
+		padding: 30px 0
+		font-size: 14px
+
+
+	/* ------------------------------------- 
+		logos
+	 ------------------------------------- */
+	.logos__img
+		margin: 20px 0
+		flex: 0 0 50%
+		img
+			margin: 0 auto
+
+
+	/* ------------------------------------- 
+		info
+	 ------------------------------------- */
+	.info
+		.container-fluid
+			padding: 0 15px
+	.info__tel-link
+		font-size: 32px
+	.info__form-title
+		font-size: 36px
+	.info__data, .info__form-call
+		font-size: 18px
+	.info__form-input
+		font-size: 18px
+		height: 58px
+	.info__map
+		margin-top: 50px
+		height: 400px
+	.info__form-btn
+		margin-top: 38px
+
 
 	/**/
 
 
 @media only screen and (max-width : 575px)
-	.nav
-		top: 33px
-	.nav__toggle
-		top: 50px
+
+	/* ------------------------------------- 
+		header
+	 ------------------------------------- */
 	.header
 		padding: 10px 15px 10px 0
-
-	.header__contacts
-		text-align: center
-		position: relative
-		bottom: -10px
+		&__contacts
+			text-align: center
+			position: relative
+			bottom: -10px
 	.phone-number
 		a
 			font-size: 12px
 
+	/* ----- navigation ----- */
+	.nav
+		top: 33px
+	.nav__toggle
+		top: 50px
 
+	/* ----- intro__heading ----- */
 	.page-title
 		font-size: 30px
 	.intro__sub-heading
 		font-size: 24px
 	.intro__about
 		font-size: 20px
-	.intro__offer
-		font-size: 20px
+
+
+	/* ------------------------------------- 
+		footer
+	 ------------------------------------- */
+	.footer__contacts-email
+		margin-right: 0
 
 	/**/
 
@@ -216,39 +495,3 @@
 @media only screen and (max-width : 320px)
 
 	/**/
-
-
-
-
-
-// @media only screen and (min-width : 320px)
-
-// 	/**/
-
-
-
-// @media only screen and (min-width : 480px)
-
-// 	/**/
-
-
-// @media only screen and (min-width : 576px)
-
-// 	/**/
-
-
-// @media only screen and (min-width : 768px)
-
-// 	/**/
-
-
-
-// @media only screen and (min-width : 992px)
-
-// 	/**/
-
-
-
-// @media only screen and (min-width : 1200px)
-
-// 	/**/
