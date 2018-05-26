@@ -26,6 +26,7 @@ var gulp           = require('gulp'),
 gulp.task('js', function() {
 	return gulp.src([
 		'app/libs/custom-scroll-master/source/jquery.custom-scroll.js',
+		'app/libs/jquery.inputmask.bundle.js',
 		'app/js/common.js'
 		])
 	.pipe(concat('scripts.js'))
@@ -36,7 +37,7 @@ gulp.task('js', function() {
 
 gulp.task('browser-sync', function() {
 	browserSync({
-		proxy: "mpk/index.php", // local server
+		proxy: "mpk/about.php", // local server
 		// server: {
 		// 	baseDir: 'app'
 		// },

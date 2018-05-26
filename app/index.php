@@ -39,92 +39,13 @@
 
 </head>
 
-<body>
+<body class="main">
 
-	<div class="page">
+	<!-- page__main -->
+	<div class="page__main">
 
 		<!-- header -->
-		<header class="header">
-			<div class="container">
-				<div class="row align-items-center">
-					<div class="col-0 col-xl-5 pb-30 pr-100">
-						<nav class="nav">
-							<div class="nav__toggle"></div>
-							<ul class="nav__list">
-								<li><a class="nav__link page__products-link" href="#">Продукция</a></li>
-								<li><a class="nav__link" href="#">Услуги</a></li>
-								<li><a class="nav__link" href="#">О нас</a></li>
-								<li><a class="nav__link" href="#">Prometall</a></li>
-								<li><a class="nav__link" href="#">Контакты</a></li>
-							</ul>
-						</nav>
-					</div>
-					<div class="col-6 col-sm-4 col-md-3 col-xl-2">
-						<div class="logo logo--header">
-							<img class="logo__svg" src="img/logo.svg" alt="logo">
-						</div>
-					</div>
-					<div class="col-6 col-sm col-md-9 col-xl-5 pb-30 pl-100">
-						<div class="row align-items-center">
-							<div class="col-12 col-sm-7 col-md-8 order-2 order-sm-0">
-								<div class="header__contacts">
-									<div class="row">
-										<div class="col-12 col-md-5">
-											<select name="city-choise" class="custom-select-cities">
-												<option value="val1">Екатеринбург</option>
-												<option value="val2">Москва</option>
-												<option value="val3">Санкт-Петербург</option>
-												<option value="val4">Екатеринбург 2</option>
-												<option value="val5">Екатеринбург 3</option>
-												<option value="val6">Екатеринбург 4</option>
-												<option value="val7">Екатеринбург 5</option>
-												<option value="val8">Екатеринбург 6</option>
-												<option value="val9">Екатеринбург 7</option>
-												<option value="val10">Екатеринбург 8</option>
-												<option value="val11">Екатеринбург 9</option>
-												<option value="val12">Екатеринбург 10</option>
-												<option value="val13">Екатеринбург 11</option>
-												<option value="val14">Екатеринбург 12</option>
-												<option value="val15">Екатеринбург 13</option>
-												<option value="val16">Екатеринбург 14</option>
-												<option value="val17">Екатеринбург 15</option>
-												<option value="val18">Екатеринбург 16</option>
-												<option value="val19">Екатеринбург 17</option>
-												<option value="val20">Екатеринбург 18</option>
-											</select>
-										</div>
-										<div class="col-12 col-md-7">
-											<div class="phone-number">
-												<a href="tel:+73433020257">+7 (343) 302-02-57</a>
-											</div>
-										</div>
-									</div>
-									<!-- row end -->
-								</div>
-								<!-- header__contacts end -->
-							</div>
-							<!-- col end -->
-							<div class="col-12 col-sm-5 col-md-4 order-1 order-sm-0">
-								<div class="header__interactivity">
-									<button type="button" class="header__btn header__btn-pers d-inline d-md-none" id="js-info-toggle"></button>
-									<button type="button" class="header__btn header__btn-search"></button>
-									<div class="header__btn-wrap">
-										<button type="button" class="header__btn header__btn-cart"></button>
-										<span class="items-quantity">2</span>
-									</div>
-								</div>
-								<!-- header__interactivity end -->
-							</div>
-							<!-- col end -->
-						</div>
-						<!-- row end -->
-					</div>
-					<!-- col end -->
-				</div> 
-				<!-- row end -->
-			</div>
-			<!-- /.container -->
-		</header>
+		<?php include("header.php");?>
 		<!-- header end -->
 	
 	
@@ -197,7 +118,7 @@
 							<div class="row mt-30">
 								<div class="col-12 col-md-4">
 									<label>
-										<select name="" class="custom-select-form">
+										<select name="Размер сторон" class="custom-select-form" id="select-2">
 											<option value="val1">110</option>
 											<option value="val2">120</option>
 											<option value="val3">130</option>
@@ -209,7 +130,7 @@
 								</div>
 								<div class="col-12 col-md-4">
 									<label>
-										<select name="" class="custom-select-form">
+										<select name="Толщина стенки" class="custom-select-form" id="select-3">
 											<option value="val1">1</option>
 											<option value="val2">2</option>
 											<option value="val3">3</option>
@@ -226,7 +147,7 @@
 								</div>
 								<div class="col-12 col-md-4">
 									<label>
-										<select name="" class="custom-select-form">
+										<select name="Размер сторон" class="custom-select-form" id="select-4">
 											<option value="val1">110</option>
 											<option value="val2">120</option>
 											<option value="val3">130</option>
@@ -264,7 +185,7 @@
 								<div class="col-md-6 col-lg-5">
 									<div class="row no-gutters">
 										<div class="col-6">
-											<select name="units" class="custom-select-form">
+											<select name="units" class="custom-select-form" id="select-5">
 												<option value="val1">тонна</option>
 												<option value="val2">килограмм</option>
 											</select>
@@ -407,99 +328,67 @@
 		<!-- logos end -->
 
 
-			<!-- info -->
-			<div class="info">
-				<div class="container-fluid">
-					<div class="row no">
-						<div class="col-12 col-xl-6">
-							<div class="info__contacts">
-								<div class="info__tel"><a class="info__tel-link" href="tel:+73433020157">+7 (343) 302-01-57</a></div>
-								<div class="info__data">
-									<div class="row align-items-end">
-										<div class="col-12 col-md-8"><span class="info__city">Екатеринбург,</span>ул. Мамина-Сибиряка 52, оф. 406</div>
-										<div class="col-12 col-md-4"><a class="info__data-email" href="mailto:sale@mpk66.ru">sale@mpk66.ru</a></div>
-									</div>
+		<!-- info -->
+		<div class="info animate">
+			<div class="container-fluid">
+				<div class="row no-gutters">
+					<div class="col-12 col-xl-6">
+						<div class="info__contacts">
+							<div class="info__tel"><a class="info__tel-link" href="tel:+73433020157">+7 (343) 302-01-57</a></div>
+							<div class="info__data">
+								<div class="row align-items-end">
+									<div class="col-12 col-md-8"><span class="info__city">Екатеринбург,</span>ул. Мамина-Сибиряка 52, оф. 406</div>
+									<div class="col-12 col-md-4"><a class="info__data-email" href="mailto:sale@mpk66.ru">sale@mpk66.ru</a></div>
 								</div>
 							</div>
-							<!-- info__contacts end -->
-							<div class="info__map">
-								<iframe src="https://snazzymaps.com/embed/73928" width="100%" height="555px" style="border:none;"></iframe>
-							</div>
-							<!-- info__map end -->
 						</div>
-						<!-- col end -->
-						<div class="col-12 col-xl-6">
-							<div class="info__form-block">
-								<div class="title section-title--white info__form-title">Персональная помощь</div>
-								<p class="info__form-call">Оставьте заявку сейчас и наш помощник в режиме реального времени ответит на Ваши вопросы</p>
-								<div class="info__form">
-									<form action="#">
-										<input class="info__form-input info__form-input-name" type="text" name="Имя" placeholder="Как вас зовут?" required>
-										<input class="info__form-input info__form-input-tel" type="tel" name="Телефон" placeholder="Ваш телефон" required>
-										<label class="checkbox">
-											<input type="checkbox" checked="" class="checkbox-hidden" required name="Согласие на обработку">
-											<span class="checkbox-wrap">
-												<span class="checkbox-pseudo">
-													<svg class="checkbox-check" xmlns="http://www.w3.org/2000/svg" version="1.1" width="13.5" height="12.5" viewBox="0 0 14.5 11.5">
-														<path d="M20 7L12 16L8 12" fill-opacity="0" fill="#ef6719" stroke-linejoin="round" stroke-linecap="round" stroke-opacity="1" stroke="#ef6719" stroke-miterlimit="50" stroke-width="3" transform="matrix(1,0,0,1,-6.75,-5.75)"></path>
-													</svg>
-												</span>
+						<!-- info__contacts end -->
+						<div class="info__map">
+							<iframe src="https://snazzymaps.com/embed/73928" width="100%" height="555px" style="border:none;"></iframe>
+						</div>
+						<!-- info__map end -->
+					</div>
+					<!-- col end -->
+					<div class="col-12 col-xl-6">
+						<div class="info__form-block">
+							<div class="title section-title--white info__form-title">Персональная помощь</div>
+							<p class="info__form-call">Оставьте заявку сейчас и наш помощник в режиме реального времени ответит на Ваши вопросы</p>
+							<div class="info__form">
+								<form action="#">
+									<input class="info__form-input info__form-input-name" type="text" name="Имя" placeholder="Как вас зовут?" required>
+									<input class="info__form-input info__form-input-tel js-mask" type="tel" name="Телефон" placeholder="Ваш телефон" required>
+									<label class="checkbox">
+										<input type="checkbox" checked="" class="checkbox-hidden" required name="Согласие на обработку">
+										<span class="checkbox-wrap">
+											<span class="checkbox-pseudo">
+												<svg class="checkbox-check" xmlns="http://www.w3.org/2000/svg" version="1.1" width="13.5" height="12.5" viewBox="0 0 14.5 11.5">
+													<path d="M20 7L12 16L8 12" fill-opacity="0" fill="#ef6719" stroke-linejoin="round" stroke-linecap="round" stroke-opacity="1" stroke="#ef6719" stroke-miterlimit="50" stroke-width="3" transform="matrix(1,0,0,1,-6.75,-5.75)"></path>
+												</svg>
 											</span>
-											<span class="checkbox-text">
-												Подтверждаю, что я ознакомлен с пользовательским соглашением правилами обработки персональных данных</span>
-										</label>
-										<input class="btn info__form-btn" type="submit" value="Отправить">
-									</form>
-								</div>
+										</span>
+										<span class="checkbox-text">
+											Подтверждаю, что я ознакомлен с пользовательским соглашением правилами обработки персональных данных</span>
+									</label>
+									<input class="btn info__form-btn" type="submit" value="Отправить">
+								</form>
 							</div>
-							<!-- nfo__form-block end -->
 						</div>
+						<!-- nfo__form-block end -->
 					</div>
-					<!-- row end -->
 				</div>
-				<!-- container-fluid end -->
+				<!-- row end -->
 			</div>
-			<!-- info end -->
+			<!-- container-fluid end -->
+		</div>
+		<!-- info end -->
 
 
-			<!-- footer -->
-			<footer class="footer">
-				<div class="container">
-					<div class="row no-gutters align-items-center">
-						<div class="col-12 col-lg-2">
-							<div class="logo logo--footer">
-								<img class="logo__svg" src="img/logo.svg" alt="logo">
-							</div>
-						</div>
-						<div class="col-12 col-lg-6 col-xl-4">
-							<div class="copy">&copy; ООО «Метало-Промышленная компания» 2018</div>
-						</div>
-						<div class="col-12 col-lg-4">
-							<div class="footer__contacts">
-								<div class="row justify-content-center justify-content-lg-start">
-									<div class="col-12 col-sm-auto">
-										<a class="footer__contacts-email" href="mailto:sale@mpk66.ru">sale@mpk66.ru</a>
-									</div>
-									<div class="col-12 col-sm-auto">
-										<a class="footer__contacts-tel" href="tel:+73433020157">+7 (343) 302-01-57</a>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-12 col-xl-2">
-							<div class="designer">
-								Дизайн — <a class="designer__link" href="http://goga.spb.ru/" target="_blank">goga.spb.ru</a>
-							</div>
-						</div>
-					</div>
-					<!-- row end -->
-				</div>
-				<!-- container end -->
-			</footer>
-			<!-- footer end -->
+		<!-- footer -->
+		<?php include("footer.php");?>
+		<!-- footer end -->
 
 	</div>
-	<!-- page__products end -->
+	<!-- page__main end -->
 
 
 

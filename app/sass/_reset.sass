@@ -9,7 +9,7 @@
 	padding: 0
 	border: none
 	font: 12px $title-font
-	overflow-x: hidden
+	// overflow-x: hidden
 	transition: color .3s ease
 	&:active
 		color: $accent-color
@@ -26,6 +26,7 @@
 	border-right: 2px solid $white-color
 	transform: rotate(45deg)
 	transition: transform .2s
+	background: none !important
 .ui-selectmenu-button-open
 	.ui-icon
 		margin-top: 5px
@@ -43,23 +44,19 @@
 	background: transparent
 	.ui-state-active
 		border: none
-		background: transparent
+		background: $accent-color
+		color: $white-color
 
 .ui-widget.ui-widget-content
 	border: none
 
 .ui-menu
 	min-width: auto !important
+	.ui-menu-item
+		margin-bottom: -1px
 	.ui-menu-item-wrapper
-		padding: 5px 10px 5px 0
+		padding: 5px 10px 5px 5px
 		white-space: nowrap
-		transition: color .3s ease
-		&:active
-			color: $accent-color!important
-			transition: color .3s ease
-	.ui-state-active
-		margin: 0 0 0 -1px
-		transition: margin .15s
 
 
 

@@ -38,10 +38,18 @@ $(function() {
 
 
 	// Scroll Animation
+	// $(window).scroll(function(){
+	// 	if ($(window).scrollTop() > $('.animate').offset().top - $(window).height() + 300) {
+	// 		$('.animate').addClass('animated');
+	// 	}
+	// });
+
 	$(window).scroll(function(){
-		if ($(window).scrollTop() > $('.animate').offset().top - $(window).height() + 300) {
-			$('.animate').addClass('animated');
-		}
+		$('.animate').each(function(i, el){
+			if ($(window).scrollTop() > $(el).offset().top - $(window).height() + 100) {
+				$(el).addClass('animated');
+			};
+		});
 	});
 
 	// Mobile menu
@@ -112,11 +120,12 @@ $(function() {
 
 	// edit interaction with jquery ui custom select and custom scrollbar
 	$('.ui-selectmenu-button').click(function(){
-		var index = $(this).attr("id").substring(6,7);
+		var index = $(this).attr("id").substring(7,8);
+		console.log(index);
 
 		$('.ui-menu').each(function(i, el) {
 
-			if ( $(el).attr("id").substring(6,7) == index) {
+			if ( $(el).attr("id").substring(7,8) == index) {
 
 				setTimeout(function(){
 					$(el).closest('.custom-scroll_container').find('.custom-scroll_bar-y').css('opacity', '0.8');
@@ -127,6 +136,20 @@ $(function() {
 		});
 
 	});
+
+
+	if(($('.js-mask').length > 0)){
+		$('.js-mask').inputmask({"mask": "+9 (999) 999-99-99"});
+	}
+
+
+
+	$(".feedbacks__block").not(":first").hide();
+
+	$(".feedbacks__tab").click(function() {
+		$(".feedbacks__tab").removeClass("feedbacks__tab--active").eq($(this).index()).addClass("feedbacks__tab--active");
+		$(".feedbacks__block").hide().eq($(this).index()).fadeIn("normal");
+	}).eq(0).addClass("active");
 
 
 });

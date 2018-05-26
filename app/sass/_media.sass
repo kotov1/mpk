@@ -48,6 +48,7 @@
 		left: 50%
 		transform: translateX(-50%)
 		top: 0
+		padding: 10px 0
 		z-index: 10
 		&.background
 			background-color: rgba($black-color, .9)
@@ -57,7 +58,7 @@
 		transition: all .25s
 		position: absolute
 		top: 33px
-		left: 25px
+		left: -29px
 		height: 36px
 		width: 36px
 		z-index: 100
@@ -77,7 +78,7 @@
 			border-radius: 15px
 			background-color: $accent-color
 			position: fixed
-			top: 50px
+			top: 59px
 			left: 15px
 			z-index: 10
 			&::before, &::after  
@@ -150,6 +151,8 @@
 		max-width: 90px
 		&--header
 			margin-left: 55px
+			transform: none
+			
 
 	.intro__heading
 		padding: 150px 0 0 0
@@ -202,6 +205,11 @@
 	.info__form-block
 		margin-top: 50px
 
+	.info__email-block
+		margin: 0 auto
+		position: static
+		
+
 
 
 
@@ -210,10 +218,93 @@
 	 ------------------------------------- */
 	.designer
 		text-align: center
+
+
+
+
+	/* ------------------------------------- 
+
+		page__contacts
+
+ 	------------------------------------- */
+
+ 	/* ------------------------------------- 
+		contmap
+	 ------------------------------------- */
+	.contmap__title
+		padding-left: 0
+	.contmap__interactive
+		height: 500px
+		overflow-x: auto
+	.contmap__interactive-container
+		top: -100px
+
+	/* ------------------------------------- 
+		continfo
+	 ------------------------------------- */
+	.continfo__data
+		padding: 50px 0 50px 135px
+	.continfo__map
+		height: 555px
+		overflow: hidden
+		display: flex
+		align-items: center
+
+
+
+
+
+	/* ------------------------------------- 
+
+		page__products
+
+	 ------------------------------------- */
+
+	/* ------------------------------------- 
+		product
+	 ------------------------------------- */
+	.product
+		.container
+			padding: 0 15px
+	.product__title
+		padding-left: 0
+	.product__info-inner
+		max-width: 100%
+		margin: 0
+	.product__img
+		img
+			margin: 0 auto
+
+	/* ------------------------------------- 
+		feedbacks
+	 ------------------------------------- */
+	.feedbacks__title
+		margin-bottom: 50px
+		padding-left: 0
+		font-size: 46px
+		text-align: center
 		
+	.feedbacks__tabs
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-around
+	.feedbacks__tab
+		margin-bottom: 50px
+
+	.feedbacks__content-text
+		padding-right: 90px
 
 
 	/**/
+
+
+
+
+
+
+
+
+
 
 
 
@@ -236,6 +327,9 @@
 	 ------------------------------------- */
 	.price__search-form, .price__result-inner
 		padding-left: 100px
+	.page__products-price
+		.price__search-form, .price__result-inner
+			padding-left: 0
 	.price__result-item
 		text-align: center
 		padding-left: 1px
@@ -252,6 +346,12 @@
 		margin-left: 7%
 
 
+	.info__form-title
+		margin-bottom: 50px
+	.info__map, .info__img
+		margin-top: 50px!important
+
+
 
 	/* ------------------------------------- 
 		footer
@@ -264,7 +364,29 @@
 
 
 
+
+
+	/* ------------------------------------- 
+
+		page__contacts
+
+ 	------------------------------------- */
+
+ 	/* ------------------------------------- 
+		contmap
+ 	------------------------------------- */
+	.contmap__interactive-container
+		left: -50px
+
+
 	/**/
+
+
+
+
+
+
+
 
 
 
@@ -288,12 +410,18 @@
 	.sm-hide
 		display: none
 
+	.btn
+		padding-top: 20px
+		padding-bottom: 20px
+
 	/* ------------------------------------- 
 		Titles and text
 	 ------------------------------------- */
 	.section-title
 		font-size: 36px
 		margin-bottom: 0
+	.title
+		font-size: 36px
 
 	/* ------------------------------------- 
 		header
@@ -306,9 +434,9 @@
 	.ui-menu .ui-menu-item-wrapper
 		padding-top: 7px
 		padding-bottom: 7px
-	#ui-id-1-menu
+	#select-1-menu
 		padding: 0 5px
-		background: rgba(#000,.8)
+		background: rgba($black-color,.8)
 	.custom-scroll_inner
 		padding: 0 !important
 
@@ -327,7 +455,7 @@
 	.nav
 		top: 24px
 	.nav__toggle
-		top: 40px
+		top: 47px
 
 
 	/* ------------------------------------- 
@@ -354,6 +482,9 @@
 	.price__search-form, .price__result-inner
 		padding-left: 50px
 
+	.price__subtitle
+		font-size: 28px
+
 	.price__search-check-box
 		flex-direction: column
 	.price__search-check
@@ -379,8 +510,6 @@
 		margin-top: 15px
 	.price__result-btn
 		margin-top: 15px
-		padding-top: 20px
-		padding-bottom: 20px
 
 	.price__result-files
 		flex-direction: column
@@ -431,6 +560,7 @@
 	.info__tel-link
 		font-size: 32px
 	.info__form-title
+		margin-bottom: 30px
 		font-size: 36px
 	.info__data, .info__form-call
 		font-size: 18px
@@ -440,11 +570,144 @@
 	.info__map
 		margin-top: 50px
 		height: 400px
+		display: flex
+		align-items: center
 	.info__form-btn
 		margin-top: 38px
 
+	.info__img
+		height: 300px
+		display: block
+		margin-top: 50px
+	.info__email-block
+		border-width: 3px
+		padding: 10px
+	.info__email-link
+		font-size: 32px
+	.info__email-add
+		font-size: 18px
+
+
+
+	/* ------------------------------------- 
+
+		page__contacts
+
+ 	------------------------------------- */
+
+ 	 /* ------------------------------------- 
+		contmap
+ 	------------------------------------- */
+	.contmap
+ 		min-height: auto
+	.contmap__interactive
+		height: 400px
+		overflow-x: auto
+	.contmap__interactive-container
+		transform: scale(0.7)
+		left: -250px
+		top: -125px
+
+	/* ------------------------------------- 
+		continfo
+	 ------------------------------------- */
+	.continfo
+		.container-fluid
+			padding: 0 15px
+	.continfo__data
+		padding: 50px 0
+	
+	.continfo__city, .continfo__descr, .continfo__tel
+		margin-bottom: 30px
+	.continfo__tel
+		padding-bottom: 30px
+
+	.continfo__descr
+		font-size: 18px
+	.continfo__tel-info, .continfo__more
+		font-size: 16px
+	.continfo__tel-link
+		font-size: 32px
+
+	.continfo__map
+		height: 400px
+
+
+
+
+
+	/* ------------------------------------- 
+
+		page__products
+
+	 ------------------------------------- */
+
+	/* ------------------------------------- 
+		product
+	 ------------------------------------- */
+	.product__name
+		font-size: 28px
+	.product__descr
+		font-size: 18px
+
+	/* ------------------------------------- 
+		feedbacks
+	 ------------------------------------- */
+	.feedbacks
+		padding: 80px 0
+	.feedbacks__title
+		font-size: 36px
+		
+	.feedbacks__tab
+		margin-bottom: 20px
+		padding: 15px 20px
+		width: 100%
+		height: auto
+		min-height: 1px
+		&-text
+			max-width: 100%
+		&::before
+			display: none
+	.feedbacks__content
+		margin-top: 50px
+	.feedbacks__content-title
+		padding-top: 0
+		font-size: 24px
+	.feedbacks__content-text
+		margin-top: 30px
+		padding-right: 25px
+		&::before
+			transform: scale(.4)
+			right: -15px
+
+	.feedbacks__offer
+		padding: 10px
+		border-width: 3px
+	.feedbacks__offer-title
+		font-size: 22px
+		margin-bottom: 10px
+	.feedbacks__offer-text
+		font-size: 18px
+
+
+
+
 
 	/**/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 @media only screen and (max-width : 575px)
@@ -464,9 +727,9 @@
 
 	/* ----- navigation ----- */
 	.nav
-		top: 33px
+		// top: 33px
 	.nav__toggle
-		top: 50px
+		top: 48px
 
 	/* ----- intro__heading ----- */
 	.page-title
