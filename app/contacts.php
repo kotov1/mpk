@@ -128,27 +128,73 @@
 									<option value="val12">Екатеринбург 10</option>
 								</select>
 							</div>
-							<!-- continfo__data-city end -->
+							<!-- continfo__city end -->
 
-							<div class="continfo__data-dynamic continfo__data-dynamic-ekaterinburg">
-								<div class="continfo__descr">
-									<p>ООО «Метало-Промышленная компания» (ООО «МПК»)</p>
-									<p>Центральный филиал в Екатеринбурге</p>
-								</div>
-								<div class="continfo__tel">
-									<span class="continfo__tel-info">Многоканальный</span>
-									<a class="continfo__tel-link" href="tel:+73433020157">+7 (343) 302-01-57</a>
-								</div>
-								<div class="continfo__more">
-									<div class="row no-gutters">
-										<div class="col-12 col-xl-6">
-											<div class="continfo__address">620142, Свердловская обл., <span class="nowrap">г. Екатеринбург</span>, <span class="nowrap">ул. Щорса,  7</span></div>
-										</div>
-										<div class="col-12 col-xl-6">
-											<div class="continfo__worktime">Работаем с понедельника <span class="nowrap">по пятницу с 9 до 18</span></div>
+							<div class="continfo__data-dynamic">
+
+								<div class="continfo__data-dynamic-ekaterinburg">
+									<div class="continfo__descr">
+										<p>ООО «Метало-Промышленная компания» (ООО «МПК»)</p>
+										<p>Центральный филиал в Екатеринбурге</p>
+									</div>
+									<div class="continfo__tel">
+										<span class="continfo__tel-info">Многоканальный</span>
+										<a class="continfo__tel-link" href="tel:+73433020157">+7 (343) 302-01-57</a>
+									</div>
+									<div class="continfo__more">
+										<div class="row no-gutters">
+											<div class="col-12 col-xl-6">
+												<div class="continfo__address">620142, Свердловская обл., <span class="nowrap">г. Екатеринбург</span>, <span class="nowrap">ул. Щорса,  7</span></div>
+											</div>
+											<div class="col-12 col-xl-6">
+												<div class="continfo__worktime">Работаем с понедельника <span class="nowrap">по пятницу с 9 до 18</span></div>
+											</div>
 										</div>
 									</div>
 								</div>
+								
+								<div class="continfo__data-dynamic-moscow">
+									<div class="continfo__descr">
+										<p>ООО «Метало-Промышленная компания» (ООО «МПК»)</p>
+										<p>Центральный филиал в Москве</p>
+									</div>
+									<div class="continfo__tel">
+										<span class="continfo__tel-info">Многоканальный</span>
+										<a class="continfo__tel-link" href="tel:+73433020157">+7 (343) 302-01-57</a>
+									</div>
+									<div class="continfo__more">
+										<div class="row no-gutters">
+											<div class="col-12 col-xl-6">
+												<div class="continfo__address">620142, Свердловская обл., <span class="nowrap">г. Москва</span>, <span class="nowrap">ул. Щорса,  7</span></div>
+											</div>
+											<div class="col-12 col-xl-6">
+												<div class="continfo__worktime">Работаем с понедельника <span class="nowrap">по пятницу с 9 до 18</span></div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="continfo__data-dynamic-spb">
+									<div class="continfo__descr">
+										<p>ООО «Метало-Промышленная компания» (ООО «МПК»)</p>
+										<p>Центральный филиал в Санкт-Петербурге</p>
+									</div>
+									<div class="continfo__tel">
+										<span class="continfo__tel-info">Многоканальный</span>
+										<a class="continfo__tel-link" href="tel:+73433020157">+7 (343) 302-01-57</a>
+									</div>
+									<div class="continfo__more">
+										<div class="row no-gutters">
+											<div class="col-12 col-xl-6">
+												<div class="continfo__address">620142, Свердловская обл., <span class="nowrap">г. Санкт-Петербург</span>, <span class="nowrap">ул. Щорса,  7</span></div>
+											</div>
+											<div class="col-12 col-xl-6">
+												<div class="continfo__worktime">Работаем с понедельника <span class="nowrap">по пятницу с 9 до 18</span></div>
+											</div>
+										</div>
+									</div>
+								</div>
+
 							</div>
 							<!-- continfo__data-dynamic end -->
 
@@ -224,13 +270,16 @@
 
 
 
-
+	<!-- modal login form -->
+	<?php include("lk.php");?>
+	<!-- modal login form end -->
 
 
 
 	<!-- Jquery с облака и замена в случае отсутствия доступа к облаку  -->
 	<script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
 	<script>window.jQuery || document.write('<script src="libs/jquery/dist/jquery.min.js"><\/script>')</script>
+
 
 	<!-- Jquery ui -->
 	<script
@@ -239,6 +288,26 @@
 	crossorigin="anonymous"></script>
 
 	<script src="js/scripts.js"></script>
+
+	<!-- shows data of chosen city in continfo section-->
+	<script>
+
+		$(document).ready(function() {
+
+			var indexCity;
+
+			$(".continfo__data-dynamic").children('div').not(":first").hide();
+
+			$('#select-6-menu').click(function() {
+				$(".continfo__data-dynamic").children('div').hide();
+				indexCity = +$('#select-6-menu').attr('aria-activedescendant').substring(6,7) - 1;
+				$(".continfo__data-dynamic").children('div').eq(indexCity).show();
+			});
+			
+
+		});
+
+	</script>
 
 </body>
 </html>

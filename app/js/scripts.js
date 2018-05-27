@@ -427,9 +427,8 @@ $(function() {
 	}
 
 
-
+	// tabs from products page
 	$(".feedbacks__block").not(":first").hide();
-
 	$(".feedbacks__tab").click(function() {
 		$(".feedbacks__tab").removeClass("feedbacks__tab--active").eq($(this).index()).addClass("feedbacks__tab--active");
 		$(".feedbacks__block").hide().eq($(this).index()).fadeIn("normal");

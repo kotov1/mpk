@@ -286,6 +286,7 @@ ul, ol
 .page__main
 	.header
 		background-color: transparent
+		
 /* ----- navigation ----- */
 .nav
 	padding-left: 40px
@@ -806,6 +807,7 @@ ul, ol
 				color: $accent-color
 				transition: color .2s
 	&__data
+		min-width: 50%
 		margin-top: 1.5rem
 		font: 1.25rem "Circe-Bold", $text-font
 		&-email
@@ -965,7 +967,7 @@ ul, ol
 		&:hover
 			cursor: pointer
 			> .contmap__point-descr
-				display: flex
+				display: block
 				z-index: 2
 
 		&-1
@@ -1077,7 +1079,7 @@ ul, ol
 			height: 9px
 			position: absolute
 			right: 0
-			top: 40%
+			top: 33%
 			border-width: 1px
 			border-color: $black-color
 
@@ -1173,6 +1175,7 @@ ul, ol
 		align-items: flex-end
 		padding: 32px
 		transition: all .2s
+		overflow: hidden
 		&.feedbacks__tab--active
 			background-color: #292929
 			color: $white-color
@@ -1180,13 +1183,13 @@ ul, ol
 				box-shadow: none
 				cursor: default
 				
+		&:last-child
+			margin-bottom: 0
+
 		&:hover
 			cursor: pointer
 			box-shadow: 0 0 20px rgba(#000, .1)
 			transition: all .2s
-			
-		&:last-child
-			margin-bottom: 0
 		&::before
 			content: ''
 			display: block
@@ -1227,6 +1230,7 @@ ul, ol
 
 		&-text
 			max-width: 50%
+			z-index: 2
 
 
 	&__content
@@ -1704,7 +1708,7 @@ ul, ol
 	&:hover
 		cursor: pointer
 	&:active
-		top: 46px
+		top: 27px
 	&::before, &::after  
 		transition: all .25s
 		content: ""
