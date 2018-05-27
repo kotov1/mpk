@@ -77,7 +77,8 @@ ul, ol
 	
 /* ----- active links ----- */
 .page__products .page__products-link,
-.page__contacts .page__contacts-link
+.page__contacts .page__contacts-link,
+.page__about .page__about-link
 	color: $accent-color!important
 
 
@@ -739,10 +740,6 @@ ul, ol
  ------------------------------------- */
 .services
 	position: relative
-	min-height: 835px
-	height: 1px // ie flex fix
-	display: flex
-	align-items: center
 	background: #f6f6f6 url('../img/services-bg.jpg') no-repeat
 	background-size: 50% 100%
 	background-position: 0 0
@@ -750,15 +747,16 @@ ul, ol
 	.section-title
 		text-shadow: 0 0 15px #000
 
-	&__content
-		width: 50%
-		margin-left: auto
 	&__list
+		width: 100%
 		padding-left: 90px
 	&__item
 		padding: 60px 46% 57px 0
 		font: 15px $title-font
 		color: $black-color
+	.ml-auto
+		margin-left: auto
+	
 
 
 /* ------------------------------------- 
@@ -1107,7 +1105,17 @@ ul, ol
 		margin-bottom: .5em
 		padding-left: 92px
 	&__info
-		border-top: 1px solid rgba($black-color, .1)
+		position: relative
+		&::before
+			content: ''
+			display: block
+			width: 50%
+			height: 1px
+			position: absolute
+			left: 0
+			top: 0
+			background: rgba($black-color, .1)
+			z-index: 0
 		&-inner
 			max-width: 500px
 			margin: 0 auto 0 92px
@@ -1267,32 +1275,236 @@ ul, ol
 
 
 
-	/* ------------------------------------- 
+/* ------------------------------------- 
 
-		page__about
+	page__about
 
-	 ------------------------------------- */
+ ------------------------------------- */
+
+ /* ------------------------------------- 
+	about__intro
+ ------------------------------------- */	
+.about__intro
+	height: 1px
+	.container
+		height: 100%
+	&::before
+		content: ''
+		display: block
+		width: 100%
+		height: 100%
+		position: absolute
+		left: 0
+		top: 0
+		background: rgba(#000, .3)
+		z-index: 0
+
+.about
+	&__titles
+		height: 100%
+		position: relative
+		padding-top: 140px
+		padding-left: 91px
+		display: flex
+		flex-direction: column
+		justify-content: space-between
+	&__title
+		&--big
+			font-size: 4rem
+		&-br
+			display: block
+
+
+/* ------------------------------------- 
+	about__info
+ ------------------------------------- */
+.about__info
+	&-block
+		max-width: 566px
+		margin: 0 auto
+		padding: 112px 0
+		color: $black-color
+	&-year
+		font: 1.875rem/1.6 $title-font
+		.br
+			display: block
+	&-products
+		margin-top: 25px
+		font: 1.25rem $text-font
+	&-service
+		margin-top: 47px
+		border: 12px solid $accent-color
+		padding: 50px
+		font: 1.25rem $text-font
+
+	&-managers
+		font: 1.25rem $text-font
+	&-call
+		margin: 20px 0
+		font: 58px $title-font
+		color: $accent-color
+		text-transform: uppercase
+		letter-spacing: -1px
+	&-right
+		font: 1.875rem/1.6 $title-font
+	.bg-gray
+		background-color: #f6f6f6
+
+
+
+/* ------------------------------------- 
+	about__advantages
+ ------------------------------------- */
+.about__advantages
+	padding: 61px 0 80px
+	position: relative
+	background: #3d444a url('../img/about-adv-bg.jpg') no-repeat
+	background-size: 50% 100%
+	background-position: 100% 0
+
+	&-title
+		font: 3.75rem/1.2 $title-font
+		text-align: center
+		letter-spacing: -2px
+		text-transform: uppercase
+		&-accent
+			display: block
+			font-size: 1.25em
+			
+	&-list
+		width: 100%
+		padding: 24px 0 0 61px
+	&-item
+		position: relative
+		max-width: 273px
+		margin-bottom: 66px
+		padding-left: 58px
+		font: 1rem/1.4 "Circe-Light", $title-font
+		color: $white-color
+		&::before
+			content: ''
+			display: block
+			width: 33px
+			height: 2px
+			position: absolute
+			left: 0
+			top: .55em
+			background: $white-color
+			z-index: 0
+	.mb-0
+		margin-bottom: 0
 
 
 
 
+/* ------------------------------------- 
+
+	page__cart
+
+ ------------------------------------- */
+.cart
+	padding-top: 123px
+	&__container
+		background-color: #f6f6f6
+	&__inner
+		padding: 30px 0 80px
+
+	&__table
+		width: 100%
+		max-width: 1269px
+		margin: 0 auto
+		border-collapse: collapse
+		color: $black-color
+		font-family: $text-font
+		tbody
+			tr
+				&.hovered
+					background: #fff
+					.ui-selectmenu-button, .price__result-quantity, .price__result-quantity-input
+						background-color: #f6f6f6
+					.cart__item-del
+						.item-delete
+							display: inline-block
+		th
+			text-align: left
+			font: 1.25rem $text-font
+			color: rgba($black-color, .66)
+		th, td
+			padding-top: 20px
+			padding-bottom: 20px
+	&__item
+		&-img
+			width: 13%
+			padding-left: 30px
+
+		&-name
+			font: 1.25rem $text-font
+			width: 40%
+			padding-left: 5%
+			padding-right: 5%
+			line-height: 1
+		&-units
+			width: 11%
+		&-quantity
+			width: 11%
+		&-price
+			padding-left: 5%
+			font: 1.875rem $title-font
+			white-space: nowrap
+			line-height: 1
+		&-del
+			text-align: center
+			width: 88px
+			line-height: .6
+			.item-delete
+				display: none
+				margin: 0 30px
+				width: 28px
+				height: 28px
+				background: url('../img/cart/del.png') no-repeat 50% 50%
+				transition: all .2s
+				&:hover
+					cursor: pointer
+				&:active
+					transform: translate(1px, 1px)
+					transition: all .2s
+					
+	tfoot
+		background-color: #3d444a
+		transform: translateY(20px)
+		
+		td
+			padding: 30px 0
+	.cart__purchase
+		padding-left: 30px
+		&-btn
+			margin-left: 0
+	.cart__sum-price
+		font: 1.875rem $title-font
+		color: $white-color
+		padding-left: 5%
+		
+			
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+	.ui-selectmenu-button
+		width: 120px
+		background: #fff
+		max-height: 42px
+		padding: 8px 18px
+		font: 18px $text-font
+		border-radius: 5px
+		color: $black-color
+		overflow-y: hidden
+		.ui-icon
+			margin-top: 9px
+			border-color: $black-color
+	.price__result-quantity
+		width: 120px
+		margin: 0 auto 0 0
+		background: #fff
+		&-input
+			background: #fff
 
 /* ------------------------------------- 
 	Media styles

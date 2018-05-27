@@ -51,12 +51,16 @@
 		<!-- product -->
 		<section class="product">
 			<div class="container">
-				<div class="row">
+				<div class="row no-gutters">
 					<div class="col-12 col-xl-6">
 						<h2 class="title product__title">Продукция</h2>
 					</div>
 				</div>
-				<div class="product__info">
+			</div>
+			<!-- container end -->
+
+			<div class="product__info">
+				<div class="container">
 					<div class="row align-items-center no-gutters">
 						<div class="col-12 col-xl-6">
 							<div class="product__info-inner">
@@ -73,9 +77,9 @@
 					</div>
 					<!-- row end -->
 				</div>
-				<!-- product__info end -->
+				<!-- container end -->
 			</div>
-			<!-- container end -->
+			<!-- product__info end -->
 		</section>
 		<!-- product end -->
 	

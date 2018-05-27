@@ -105,7 +105,7 @@
 		padding: 0
 		border-radius: 0px
 		position: fixed
-		left: -15px!important
+		left: 0!important
 		top: 0!important
 		background-color: rgba($black-color, .9)
 		overflow-y: auto
@@ -176,13 +176,12 @@
 			top: 0
 			background: rgba(#000, .8)
 			z-index: -1
- 	.services__content
- 		width: 85%
+		.ml-auto
+			margin-left: 0
 	.services__list
-		padding-left: 0
+		padding-left: 100px
 	.services__item
 		color: $white-color
-
 
 
 	/* ------------------------------------- 
@@ -268,6 +267,8 @@
 			padding: 0 15px
 	.product__title
 		padding-left: 0
+	.product__info::before
+		width: 100%
 	.product__info-inner
 		max-width: 100%
 		margin: 0
@@ -295,6 +296,74 @@
 		padding-right: 90px
 
 
+
+
+	/* ------------------------------------- 
+
+		page__about
+
+	 ------------------------------------- */
+
+	 /* ------------------------------------- 
+		about__intro
+	 ------------------------------------- */	
+	.about__titles
+		padding-left: 0
+	.about__title--big
+		font-size: 58px
+
+	/* ------------------------------------- 
+		about__info
+	 ------------------------------------- */
+	.about__info-block
+		padding: 90px 0
+
+	/* ------------------------------------- 
+		about__advantages
+	 ------------------------------------- */
+	.about__advantages
+		background-size: cover
+		z-index: 1
+		&::before
+			content: ''
+			display: block
+			width: 100%
+			height: 100%
+			position: absolute
+			left: 0
+			top: 0
+			background: rgba(#000, .8)
+			z-index: -1
+	.about__advantages-title
+		font-size: 58px
+		&-accent
+			font-size: 1.1em
+
+
+
+	/* ------------------------------------- 
+
+		page__cart
+
+	 ------------------------------------- */
+	.cart__table tbody tr.hovered .item-delete
+		visibility: visible
+	.cart__item-del .item-delete
+		display: inline-block
+		visibility: hidden
+		transition: none
+		margin: 0 15px
+	.cart__item-img
+		padding-left: 15px
+	.cart__table th, .cart__item-name
+		font-size: 18px
+	.cart__item-price, .cart .cart__sum-price
+		font-size: 24px
+	.cart__item-name
+		line-height: 1.4
+	.cart__item-units
+		width: 15%
+		
 	/**/
 
 
@@ -377,6 +446,30 @@
  	------------------------------------- */
 	.contmap__interactive-container
 		left: -50px
+
+
+
+	/* ------------------------------------- 
+
+		page__cart
+
+	 ------------------------------------- */
+	.cart__table th, .cart__item-name
+		font-size: 15px
+	.cart__table th
+		padding-bottom: 0
+
+	.cart .ui-selectmenu-button, .cart .price__result-quantity
+		width: 100px
+	.cart__item-price, .cart .cart__sum-price
+		font-size: 22px
+	.cart__table .cart__item-name
+		padding-left: 3%
+		padding-right: 3%
+	.cart__table .cart__item-price
+		padding-left: 3%
+	.cart__item-units
+		padding-right: 1%
 
 
 	/**/
@@ -480,7 +573,7 @@
 	.price__search
 		padding-top: 75px
 	.price__search-form, .price__result-inner
-		padding-left: 50px
+		padding-left: 45px
 
 	.price__subtitle
 		font-size: 28px
@@ -531,11 +624,10 @@
 		services
 	 ------------------------------------- */
 	.services
-		min-height: auto
-		height: auto
 		padding: 50px 0
-		animation: bgMove 60s infinite
-
+		animation: bgMove 40s infinite
+	.services__list
+		padding-left: 45px
 	.services__item
 		padding: 30px 0
 		font-size: 14px
@@ -690,9 +782,122 @@
 		font-size: 18px
 
 
+	/* ------------------------------------- 
+		about__info
+	 ------------------------------------- */
+	.about__info-block
+		padding: 50px 0
+
+
+	.about__info-year
+		font-size: 28px
+		line-height: 1.4
+	.about__info-products
+		font-size: 18px
+	.about__info-service
+		margin-top: 35px
+		padding: 10px
+		border-width: 3px
+		font-size: 18px
+	.about__info-managers
+		font-size: 16px
+	.about__info-call
+		font-size: 30px
+	.about__info-right
+		font-size: 22px
+		line-height: 1.4
+
+
+	/* ------------------------------------- 
+		about__advantages
+	 ------------------------------------- */
+	.about__advantages
+		padding: 50px 0
+		animation: bgMove 40s infinite
+	.about__advantages-title
+		font-size: 30px
+		&-accent
+			font-size: 1.1em
+	.about__advantages-list
+		padding-left: 0
 
 
 
+	/* ------------------------------------- 
+
+		page__about
+
+	 ------------------------------------- */
+	.about__intro
+		height: auto
+		
+
+
+
+	/* ------------------------------------- 
+
+		page__cart
+
+	 ------------------------------------- */
+	.cart__inner
+		padding: 50px 0
+	.cart__table
+		min-width: 100%
+		thead tr 
+			position: absolute
+			top: -9999em
+			left: -9999em
+
+		tbody
+			tr + tr 
+				margin-top: 1.5em
+
+		tbody
+			tr, td 
+				display: block
+				width: 100%
+		tbody
+			tr
+				padding: 15px
+				background-color: #fff
+
+		.ui-selectmenu-button, .price__result-quantity, .price__result-quantity-input
+			background-color: #f6f6f6
+
+		tbody
+			td:not(.cart__item-del)
+				padding: 15px 0 15px 50% !important
+				position: relative
+
+			td
+				&::before 
+					content: attr(data-label)
+					display: inline-block
+					position: absolute
+					left: 0
+					top: 50%
+					transform: translateY(-50%)
+					line-height: 1.5
+
+		.cart__item-del
+			display: flex
+			align-items: center
+			justify-content: center
+
+		tfoot
+			display: flex
+			justify-content: center
+			padding: 20px 0
+			td
+				display: block
+				padding: 10px 0!important
+				text-align: center
+				
+
+
+		.cart__item-del .item-delete
+			visibility: visible
+			
 	/**/
 
 

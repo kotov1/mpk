@@ -7,7 +7,7 @@
 					<ul class="nav__list">
 						<li><a class="nav__link page__products-link" href="products.php">Продукция</a></li>
 						<li><a class="nav__link" href="#">Услуги</a></li>
-						<li><a class="nav__link" href="#">О нас</a></li>
+						<li><a class="nav__link page__about-link" href="about.php">О нас</a></li>
 						<li><a class="nav__link" href="#">Prometall</a></li>
 						<li><a class="nav__link page__contacts-link" href="contacts.php">Контакты</a></li>
 					</ul>
@@ -60,10 +60,10 @@
 					<!-- col end -->
 					<div class="col-12 col-sm-5 col-md-4 order-1 order-sm-0">
 						<div class="header__interactivity">
-							<button type="button" class="header__btn header__btn-pers d-inline d-md-none" id="js-info-toggle"></button>
+							<button type="button" class="header__btn header__btn-pers d-inline" id="js-info-toggle"></button>
 							<button type="button" class="header__btn header__btn-search"></button>
 							<div class="header__btn-wrap">
-								<button type="button" class="header__btn header__btn-cart"></button>
+								<a href="cart.php"><button type="button" class="header__btn header__btn-cart"></button></a>
 								<span class="items-quantity">2</span>
 							</div>
 						</div>

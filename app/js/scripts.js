@@ -320,12 +320,6 @@ $(function() {
 
 
 	// Scroll Animation
-	// $(window).scroll(function(){
-	// 	if ($(window).scrollTop() > $('.animate').offset().top - $(window).height() + 300) {
-	// 		$('.animate').addClass('animated');
-	// 	}
-	// });
-
 	$(window).scroll(function(){
 		$('.animate').each(function(i, el){
 			if ($(window).scrollTop() > $(el).offset().top - $(window).height() + 100) {
@@ -340,9 +334,9 @@ $(function() {
 	});
 
 	// show/hide contacts info by clicking on contacts icon
-	$('#js-info-toggle').click(function() {
-		$('.header__contacts').slideToggle();
-	});
+	// $('#js-info-toggle').click(function() {
+	// 	$('.header__contacts').slideToggle();
+	// });
 
 	// change color of text in search__type block depending on the checkbox position
 	$('#rounded-label').click(function() {
@@ -403,7 +397,6 @@ $(function() {
 	// edit interaction with jquery ui custom select and custom scrollbar
 	$('.ui-selectmenu-button').click(function(){
 		var index = $(this).attr("id").substring(7,8);
-		console.log(index);
 
 		$('.ui-menu').each(function(i, el) {
 
@@ -432,6 +425,19 @@ $(function() {
 		$(".feedbacks__tab").removeClass("feedbacks__tab--active").eq($(this).index()).addClass("feedbacks__tab--active");
 		$(".feedbacks__block").hide().eq($(this).index()).fadeIn("normal");
 	}).eq(0).addClass("active");
+
+
+
+	$(document).ready(function() {
+		if($(window).width() > 767) {
+			$(".cart__table tr").hover(function() {
+				$(".cart__table tr").removeClass('hovered');
+				$(this).addClass('hovered');
+			});
+		}
+	});
+	
+
 
 
 });

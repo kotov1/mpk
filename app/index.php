@@ -237,9 +237,10 @@
 			</div>
 			<!-- services__title end-->
 
-			<div class="services__content">
-				<div class="container">
-					<div class="services__list">
+			<div class="container">
+				<div class="row">
+					<div class="col-12 col-xl-6 d-flex justify-content-center ml-auto">
+						<div class="services__list">
 						<div class="row">
 							<div class="col-12 col-md-4">
 								<div class="services__item">Комплектация сложных заказов</div>
@@ -282,10 +283,13 @@
 						<!-- row end -->
 					</div>
 					<!-- services__list end -->
+					</div>
+					<!-- col end -->
 				</div>
-				<!-- container end -->
+				<!-- row end -->
 			</div>
-			<!-- services__content end -->
+			<!-- container end -->
+
 		</section>
 		<!-- services end -->
 
