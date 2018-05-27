@@ -52,11 +52,7 @@
 		<section class="cart">
 
 			<div class="container">
-				<div class="row">
-					<div class="col-12 col-xl-6">
-						<h2 class="title product__title">Ваша корзина</h2>
-					</div>
-				</div>
+				<h2 class="title cart__title section-title--black">Ваша корзина</h2>
 			</div>
 			<!-- container end -->
 
@@ -75,7 +71,7 @@
 								</thead>
 								<tbody>
 									<!-- 1 -->
-									<tr class="hovered">
+									<tr>
 										<td class="cart__item-img" data-label="Фото"><img src="img/cart/product1.jpg" alt="alt" class="img-responsive"></td>
 										<td class="cart__item-name" data-label="Наименование">Уголок - равнополочный, 09г2с, 110x8</td>
 										<td class="cart__item-units" data-label="Ед. измерения">

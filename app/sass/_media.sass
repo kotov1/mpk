@@ -71,15 +71,14 @@
 			right: -9000px
 
 		&__toggle
-			transition: all .25s
-			content: ""
+			position: fixed
+			top: 59px
+			left: 15px
 			height: 2px
 			width: 30px
 			border-radius: 15px
 			background-color: $accent-color
-			position: fixed
-			top: 59px
-			left: 15px
+			transition: all .25s
 			z-index: 10
 			&::before, &::after  
 				transition: all .25s
@@ -140,7 +139,7 @@
 			&:after
 				width: 30px
 				transition: all .25s
-				top: -0px
+				top: 0
 				transform: rotate(-45deg)
 
 
@@ -346,6 +345,8 @@
 		page__cart
 
 	 ------------------------------------- */
+	.cart__title
+		padding-left: 10px
 	.cart__table tbody tr.hovered .item-delete
 		visibility: visible
 	.cart__item-del .item-delete
@@ -471,6 +472,16 @@
 	.cart__item-units
 		padding-right: 1%
 
+
+
+
+	/* ------------------------------------- 
+
+		page__prometall
+
+	 ------------------------------------- */
+	.prometall__folders-item
+		padding: 40px
 
 	/**/
 
@@ -746,7 +757,7 @@
 		feedbacks
 	 ------------------------------------- */
 	.feedbacks
-		padding: 80px 0
+		padding: 80px 0 50px
 	.feedbacks__title
 		font-size: 36px
 		
@@ -839,8 +850,10 @@
 		page__cart
 
 	 ------------------------------------- */
+	.cart__title
+		padding-left: 0
 	.cart__inner
-		padding: 50px 0
+		padding: 50px 0 70px
 	.cart__table
 		min-width: 100%
 		thead tr 
@@ -897,7 +910,36 @@
 
 		.cart__item-del .item-delete
 			visibility: visible
-			
+
+
+
+
+	/* ------------------------------------- 
+
+		page__prometall
+
+	 ------------------------------------- */
+	.prometall__inner
+		padding: 50px 0 20px
+	.prometall__folders-item
+		padding: 20px
+	.prometall__folders-descr
+		font-size: 18px
+		margin-top: 1em
+		text-align: center
+
+
+
+	/* ------------------------------------- 
+
+		page__services
+
+	 ------------------------------------- */
+	.work__inner
+		padding: 50px 0 20px
+
+
+
 	/**/
 
 
@@ -951,15 +993,33 @@
 	.footer__contacts-email
 		margin-right: 0
 
-	/**/
 
 
-@media only screen and (max-width : 480px)
-
-	/**/
-
-
-
-@media only screen and (max-width : 320px)
+	/* ------------------------------------- 
+		modal login form
+	 ------------------------------------ */	
+	.login .ta-right
+		text-align: center
+	.login__block
+		padding: 50px 15px 50px
+	.login__title
+		font-size: 26px
+	.login__form
+		max-width: 364px
+		margin: 30px auto 0
+	.login__reg
+		margin-top: 30px
+	
+	.mfp-close
+		width: 30px
+		height: 30px
+		line-height: 30px
+		top: 15px
+		right: 15px
+		&::before, &::after  
+			width: 30px
+			top: 14px
+		&:active
+			top: 17px
 
 	/**/

@@ -27,6 +27,7 @@ gulp.task('js', function() {
 	return gulp.src([
 		'app/libs/custom-scroll-master/source/jquery.custom-scroll.js',
 		'app/libs/jquery.inputmask.bundle.js',
+		'app/libs/magnific-popup/dist/jquery.magnific-popup.min.js',
 		'app/js/common.js'
 		])
 	.pipe(concat('scripts.js'))

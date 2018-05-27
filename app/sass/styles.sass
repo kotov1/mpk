@@ -78,7 +78,9 @@ ul, ol
 /* ----- active links ----- */
 .page__products .page__products-link,
 .page__contacts .page__contacts-link,
-.page__about .page__about-link
+.page__about .page__about-link,
+.page__prometall .page__prometall-link,
+.page__services .page__services-link
 	color: $accent-color!important
 
 
@@ -178,6 +180,13 @@ ul, ol
 		transition-property: top, opacity
 		transition-duration: 1s, 2s
 		transition-timing-function: linear, ease
+@media only screen and (max-width : 767px)
+	.animate
+		opacity: 1
+		top: 0
+		transition: none
+		&.animated
+			transition: none
 
 
 @keyframes bgMove
@@ -225,7 +234,7 @@ ul, ol
 .title
 	font-family: $title-font
 	font-size: 3.625rem
-
+	letter-spacing: -1px
 .page-title
 	font-size: 4.5rem
 	line-height: 0.9
@@ -1404,8 +1413,16 @@ ul, ol
  ------------------------------------- */
 .cart
 	padding-top: 123px
+
 	&__container
 		background-color: #f6f6f6
+
+	&__title
+		max-width: 1269px
+		margin: 1em auto .5em
+		padding-left: 30px
+		
+
 	&__inner
 		padding: 30px 0 80px
 
@@ -1432,11 +1449,11 @@ ul, ol
 		th, td
 			padding-top: 20px
 			padding-bottom: 20px
+
 	&__item
 		&-img
 			width: 13%
 			padding-left: 30px
-
 		&-name
 			font: 1.25rem $text-font
 			width: 40%
@@ -1484,9 +1501,6 @@ ul, ol
 		color: $white-color
 		padding-left: 5%
 		
-			
-
-
 	.ui-selectmenu-button
 		width: 120px
 		background: #fff
@@ -1505,6 +1519,211 @@ ul, ol
 		background: #fff
 		&-input
 			background: #fff
+
+
+
+/* ------------------------------------- 
+
+	page__prometall
+
+ ------------------------------------- */
+.prometall
+	padding-top: 123px
+	&__title
+		margin-top: 1em
+		margin-bottom: .5em
+	&__title, &__folders
+		max-width: 1269px
+		margin-left: auto
+		margin-right: auto
+	&__inner
+		padding: 75px 0
+		background: #f6f6f6
+	&__folders
+		&-item
+			display: block
+			margin-bottom: 30px
+			text-decoration: none
+			border: 10px solid transparent
+			padding: 45px 75px
+			background-color: $white-color
+			color: $black-color
+			transition: all .3s
+			&:hover
+				border: 10px solid $accent-color
+				cursor: pointer
+				text-decoration: none
+				transition: all .3s
+		&-img
+			width: 80px
+			height: 80px
+			margin: 0 auto
+			display: flex
+			align-items: center
+			justify-content: center
+		&-descr
+			margin-top: .5em
+			font: 1.25rem $text-font
+
+
+
+
+/* ------------------------------------- 
+
+	page__services
+
+ ------------------------------------- */
+.work
+	padding-top: 123px
+	&__title
+		margin-top: 1em
+		margin-bottom: .5em
+	&__title, &__items
+		max-width: 1269px
+		margin-left: auto
+		margin-right: auto
+	&__inner
+		padding: 75px 0
+		background: #f6f6f6
+	&__item
+		position: relative
+		display: flex
+		align-items: flex-end
+		width: 100%
+		height: 270px
+		margin-bottom: 30px
+		padding: 40px
+		background-repeat: no-repeat
+		background-position: 50% 50%
+		background-size: cover
+		text-decoration: none
+		transition: all .3s
+		&::before
+			content: ''
+			display: block
+			width: 100%
+			height: 100%
+			position: absolute
+			left: 0
+			top: 0
+			z-index: 0
+			border: 10px solid $accent-color
+			visibility: hidden
+			opacity: 0
+			transition: all .1s
+		&:hover
+			cursor: pointer
+			text-decoration: none
+			&::before
+				visibility: visible
+				opacity: 1
+				transition: all .3s
+				
+		&-descr
+			font: 1.25rem $title-font
+			color: $white-color
+
+
+
+
+/* ------------------------------------- 
+	modal login form
+ ------------------------------------- */
+.login
+	max-width: 575px
+	margin: 0 auto
+	&__block
+		position: relative
+		padding: 50px 100px 70px
+		background-color: #3d444a
+	&__title
+		font: 1.875rem $title-font
+		text-align: center
+		color: $white-color
+	&__form
+		margin-top: 40px
+	&__label
+		position: relative
+		display: block
+	&__input
+		display: block
+		width: 100%
+		height: 70px
+		margin-bottom: 15px
+		padding: 8px 90px 0 20px
+		border: none
+		border: 1px solid rgba($black-color, .3)
+		border-left-color: rgba($black-color, .1)
+		border-right-color: rgba($black-color, .1)
+		border-bottom-color: transparent
+		border-radius: 5px
+		font: 20px $text-font
+		&:focus
+			outline: none
+			box-shadow: 0 -1px 4px -1px rgba($black-color, .3)
+	&__btn
+		width: 165px
+		margin-top: 15px
+	&__remember
+		font: 16px $text-font
+		color: $accent-color
+		position: absolute
+		right: 25px
+		top: 50%
+		transform: translateY(-50%)
+		text-decoration: none
+		&:hover
+			text-decoration: underline
+	&__reg
+		display: inline-block
+		margin-top: 15px
+		font: 12px $title-font
+		text-transform: uppercase
+		color: $white-color
+		text-decoration: none
+		transition: color .3s
+		&:hover
+			color: $accent-color
+			transition: color .3s
+		&:active
+			transform: translate(1px, 1px)
+	
+	.ta-right
+		text-align: right
+	.field-hint
+		left: 22px
+		
+.mfp-close
+	opacity: .8
+	width: 40px
+	height: 40px
+	line-height: 40px
+	padding: 0
+	top: 25px
+	right: 25px
+	&:hover
+		cursor: pointer
+	&:active
+		top: 46px
+	&::before, &::after  
+		transition: all .25s
+		content: ""
+		position: absolute
+		top: 18px
+		left: 0
+		height: 3px
+		width: 40px
+		border-radius: 15px
+		background-color: #fff
+	&::before
+		transform: rotate(45deg)
+	&::after 
+		transform: rotate(-45deg)
+
+
+
+
+
 
 /* ------------------------------------- 
 	Media styles

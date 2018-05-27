@@ -6,9 +6,9 @@
 					<div class="nav__toggle"></div>
 					<ul class="nav__list">
 						<li><a class="nav__link page__products-link" href="products.php">Продукция</a></li>
-						<li><a class="nav__link" href="#">Услуги</a></li>
+						<li><a class="nav__link page__services-link" href="services.php">Услуги</a></li>
 						<li><a class="nav__link page__about-link" href="about.php">О нас</a></li>
-						<li><a class="nav__link" href="#">Prometall</a></li>
+						<li><a class="nav__link page__prometall-link" href="prometall.php">Prometall</a></li>
 						<li><a class="nav__link page__contacts-link" href="contacts.php">Контакты</a></li>
 					</ul>
 				</nav>
@@ -60,10 +60,10 @@
 					<!-- col end -->
 					<div class="col-12 col-sm-5 col-md-4 order-1 order-sm-0">
 						<div class="header__interactivity">
-							<button type="button" class="header__btn header__btn-pers d-inline" id="js-info-toggle"></button>
-							<button type="button" class="header__btn header__btn-search"></button>
+							<a href="#login" class="header__btn header__btn-pers d-inline" id="js-login-call"></a>
+							<a href="products.php#products-price" class="header__btn header__btn-search"></a>
 							<div class="header__btn-wrap">
-								<a href="cart.php"><button type="button" class="header__btn header__btn-cart"></button></a>
+								<a href="cart.php" class="header__btn header__btn-cart"></a>
 								<span class="items-quantity">2</span>
 							</div>
 						</div>

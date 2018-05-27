@@ -74,7 +74,7 @@
 				<div class="row">
 					<div class="col-12 col-xl-6 d-flex align-items-center">
 						<div class="about__info-block">
-							<div class="about__info-year">Компания МПК работает <span class="br">для клиентов с 2009 г.</span> </div>
+							<div class="about__info-year">Компания МПК работает <span class="br">для клиентов <span class="nowrap">с 2009 г.</span></span> </div>
 							<div class="about__info-products">Мы продаём металлопрокат, сопровождая каждую сделку клиентоориентированным обслуживанием и сервисными услугами.</div>
 							<div class="about__info-service">К сервису мы относим: доставку на собственном автотранспорте, круглосуточный склад с металлообрабатывающим оборудованием и порядок в отгрузочный документах.</div>
 						</div>

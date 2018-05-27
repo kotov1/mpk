@@ -56,6 +56,11 @@ $(function() {
 	// 	$('.header__contacts').slideToggle();
 	// });
 
+	$('#js-login-call').magnificPopup({
+		type:'inline',
+		midClick: true
+	});
+
 	// change color of text in search__type block depending on the checkbox position
 	$('#rounded-label').click(function() {
 		$('.price__search-type').toggleClass('price__search-type--active');

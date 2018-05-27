@@ -85,7 +85,7 @@
 	
 
 		<!-- price -->
-		<section class="price page__products-price">
+		<section class="price page__products-price" id="products-price">
 			<!-- price__search -->
 			<div class="price__search">
 				<div class="container">
@@ -319,10 +319,17 @@
 
 
 
-
 	<!-- Jquery с облака и замена в случае отсутствия доступа к облаку  -->
 	<script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
 	<script>window.jQuery || document.write('<script src="libs/jquery/dist/jquery.min.js"><\/script>')</script>
+	
+	<!-- animated scroll to search products section from a header's link-->
+	<script>
+		var myHash = location.hash;
+		if(myHash[1] != undefined){
+			$('html, body').animate({scrollTop: $(myHash).offset().top}, 750);
+		};
+	</script>
 
 	<!-- Jquery ui -->
 	<script
