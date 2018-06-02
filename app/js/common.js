@@ -1,12 +1,12 @@
+// preloader
+$(window).on('load', function() {
+	$('#preloader').fadeOut(); 
+	$('#preloader__icon').delay(350).fadeOut('slow');
+})
+	
 $(function() {
 
 	"use strict";
-
-	// preloader
-	$(window).on('load', function() {
-		$('#preloader').fadeOut(); 
-		$('#preloader__icon').delay(350).fadeOut('slow');
-	})
 
 	// jquery ui custom select
 	$('.custom-select-cities').selectmenu();
