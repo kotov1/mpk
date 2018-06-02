@@ -288,6 +288,12 @@ $(function() {
 
 	"use strict";
 
+	// preloader
+	$(window).on('load', function() {
+		$('#preloader').fadeOut(); 
+		$('#preloader__icon').delay(350).fadeOut('slow');
+	})
+
 	// jquery ui custom select
 	$('.custom-select-cities').selectmenu();
 	$('.custom-select-form').selectmenu();
@@ -435,7 +441,7 @@ $(function() {
 	}).eq(0).addClass("active");
 
 
-
+	// cart table rows hovering
 	$(document).ready(function() {
 		if($(window).width() > 767) {
 			$(".cart__table tr").hover(function() {
@@ -444,6 +450,24 @@ $(function() {
 			});
 		}
 	});
+
+
+
+	$(document).ready(function() {
+
+		var indexCity;
+
+		$(".phone-number").children('.phone-number-link').not(":first").hide();
+
+		$('#select-1-menu').click(function() {
+			$(".phone-number").children('.phone-number-link').hide();
+			indexCity = +$('#select-1-menu').attr('aria-activedescendant').substring(6,7) - 1;
+			$(".phone-number").children('.phone-number-link').eq(indexCity).show();
+		});
+		
+
+		});
+
 	
 
 

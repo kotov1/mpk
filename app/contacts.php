@@ -160,7 +160,7 @@
 									</div>
 									<div class="continfo__tel">
 										<span class="continfo__tel-info">Многоканальный</span>
-										<a class="continfo__tel-link" href="tel:+73433020157">+7 (343) 302-01-57</a>
+										<a class="continfo__tel-link" href="tel:+79197520203">+7 (919) 752-02-03</a>
 									</div>
 									<div class="continfo__more">
 										<div class="row no-gutters">
@@ -181,7 +181,7 @@
 									</div>
 									<div class="continfo__tel">
 										<span class="continfo__tel-info">Многоканальный</span>
-										<a class="continfo__tel-link" href="tel:+73433020157">+7 (343) 302-01-57</a>
+										<a class="continfo__tel-link" href="tel:+79582101259">+7 (958) 210-12-59</a>
 									</div>
 									<div class="continfo__more">
 										<div class="row no-gutters">
@@ -203,7 +203,9 @@
 					</div>
 					<!-- col end -->
 					<div class="col-12 col-xl-6">
-						<div class="continfo__map"><iframe src="https://snazzymaps.com/embed/73928" width="100%" height="775px" style="border:none;"></iframe></div>
+						<div class="continfo__map">
+							<div class="continfo__map-frame" id="map"></div>
+						</div>
 					</div>
 				</div>
 				<!-- row end -->
@@ -276,6 +278,24 @@
 
 
 
+	<!-- preloader -->
+	<div class="preloader" id="preloader">
+		<div class="preloader__icon" id="preloader__icon">
+			<div class="sk-cube sk-cube-1"></div>
+			<div class="sk-cube sk-cube-2"></div>
+			<div class="sk-cube sk-cube-3"></div>
+			<div class="sk-cube sk-cube-4"></div>
+			<div class="sk-cube sk-cube-5"></div>
+			<div class="sk-cube sk-cube-6"></div>
+			<div class="sk-cube sk-cube-7"></div>
+			<div class="sk-cube sk-cube-8"></div>
+			<div class="sk-cube sk-cube-9"></div>
+		</div>
+	</div>
+	<!-- preloader end -->
+
+
+
 	<!-- Jquery с облака и замена в случае отсутствия доступа к облаку  -->
 	<script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
 	<script>window.jQuery || document.write('<script src="libs/jquery/dist/jquery.min.js"><\/script>')</script>
@@ -289,25 +309,10 @@
 
 	<script src="js/scripts.js"></script>
 
-	<!-- shows data of chosen city in continfo section-->
-	<script>
+	<script src="js/contacts.js"></script>
 
-		$(document).ready(function() {
+	<script defer="" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBLbvRklD8-wXSSpujy7ArsetqJdNGTKag&amp;v=3.31&amp;language=ru&amp;libraries=places,geometry&amp;callback=createMap"></script>
 
-			var indexCity;
-
-			$(".continfo__data-dynamic").children('div').not(":first").hide();
-
-			$('#select-6-menu').click(function() {
-				$(".continfo__data-dynamic").children('div').hide();
-				indexCity = +$('#select-6-menu').attr('aria-activedescendant').substring(6,7) - 1;
-				$(".continfo__data-dynamic").children('div').eq(indexCity).show();
-			});
-			
-
-		});
-
-	</script>
 
 </body>
 </html>

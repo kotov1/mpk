@@ -1,13 +1,14 @@
 <header class="header">
 	<div class="container">
 		<div class="row align-items-center">
-			<div class="col-0 col-xl-5 pr-100">
+			<div class="col-0 col-xl-5 pr-20">
 				<nav class="nav">
 					<div class="nav__toggle"></div>
 					<ul class="nav__list">
 						<li><a class="nav__link page__products-link" href="products.php">Продукция</a></li>
 						<li><a class="nav__link page__services-link" href="services.php">Услуги</a></li>
 						<li><a class="nav__link page__about-link" href="about.php">О нас</a></li>
+						<li><a class="nav__link page__delivery-link" href="delivery.php">Доставка</a></li>
 						<li><a class="nav__link page__prometall-link" href="prometall.php">Prometall</a></li>
 						<li><a class="nav__link page__contacts-link" href="contacts.php">Контакты</a></li>
 					</ul>
@@ -49,7 +50,9 @@
 								</div>
 								<div class="col-12 col-md-7">
 									<div class="phone-number">
-										<a href="tel:+73433020257">+7 (343) 302-02-57</a>
+										<a class="phone-number-link" href="tel:+73433020257">+7 (343) 302-02-57</a>
+										<a class="phone-number-link" href="tel:+79197520203">+7 (919) 752-02-03</a>
+										<a class="phone-number-link" href="tel:+79582101259">+7 (958) 210-12-59</a>
 									</div>
 								</div>
 							</div>
